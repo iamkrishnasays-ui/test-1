@@ -1,0 +1,27 @@
+name: Echo Input Details
+
+on:
+  workflow_dispatch:
+    inputs:
+      Name:
+        description: 'Employee Name'
+        required: true
+        type: string
+      Designation:
+        description: 'Employee Designation'
+        required: true
+        type: string
+      Salary:
+        description: 'Employee Salary'
+        required: true
+        type: string
+
+jobs:
+  echo-details:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo Employee Details
+        run: |
+          echo "Name: ${{ github.event.inputs.Name }}"
+          echo "Designation: ${{ github.event.inputs.Designation }}"
+          echo "Salary: ${{ github.event.inputs.Salary }}"
