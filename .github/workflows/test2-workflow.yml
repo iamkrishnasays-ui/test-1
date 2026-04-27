@@ -13,3 +13,4 @@ jobs:
           
           echo "Test command 1"
           echo "Test command 2"
+          echo "Test command 3"
