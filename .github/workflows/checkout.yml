@@ -20,4 +20,4 @@ jobs:
         run: |
           ls -altr
           pwd
-    
+          cat students.txt
